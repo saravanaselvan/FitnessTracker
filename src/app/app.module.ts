@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -10,6 +11,9 @@ import { TrainingComponent } from './training/training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { NewTrainingComponent } from './training/new-training/new-training.component';
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,19 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
     TrainingComponent,
     CurrentTrainingComponent,
     NewTrainingComponent,
-    PastTrainingsComponent
+    PastTrainingsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
